@@ -1,13 +1,13 @@
 
 const CHORDS = [
-  "A", "Am", "A#", "A#m",
-  "B", "Bm", "B#", "B#m",
-  "C", "Cm", "C#", "C#m",
-  "D", "Dm", "D#", "D#m",
-  "E", "Em", "E#", "E#m",
-  "F", "Fm", "F#", "F#m",
-  "G", "Gm", "G#", "G#m"
-];
+  "A", "Ab", "Am", "Am7", "A#", "A#m",  "A#m7",
+  "B", "Bb", "Bm", "Bm7", "B#", "B#m",  "B#m7",
+  "C", "Cb", "Cm", "Cm7", "C#", "C#m",  "C#m7",
+  "D", "Db", "Dm", "Dm7", "D#", "D#m",  "D#m7",
+  "E", "Eb", "Em", "Em7", "E#", "E#m",  "E#m7",
+  "F", "Fb", "Fm", "Fm7", "F#", "F#m",  "F#m7",
+  "G", "Gb", "Gm", "Gm7", "G#", "G#m",  "G#m7"
+ ];
 
 function parseChords(text) {
   return CHORDS.reduce((acc, chord) => {
@@ -15,8 +15,6 @@ function parseChords(text) {
     return acc;
   }, new Set());
 }
-
-
 
 function renderChord(chord = "") {
   const c = chord.replace("#", "d");

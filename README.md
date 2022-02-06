@@ -1,0 +1,1 @@
+https://partitions.betaflag.com
