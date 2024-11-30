@@ -15,6 +15,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <style>
+    [data-bs-theme="dark"] {
+      --bd-purple: #4c0bce;
+      --bd-violet: #712cf9;
+      --bd-accent: #ffe484;
+      --bd-pink-rgb: 214,51,132;
+      --bd-violet-rgb: 112.520718,44.062154,249.437846;
+      --bd-accent-rgb: 255,228,132;
+    }
     html, body {
       font-family: 'Lato', sans-serif; /* Use your chosen font */
     }
@@ -30,6 +38,9 @@
       font-family: 'Montserrat', sans-serif; /* Optional: Apply to specific elements */
     }
     
+    #content {
+      background-image: linear-gradient(180deg, rgba(var(--bs-body-bg-rgb), 0.01), rgba(var(--bs-body-bg-rgb), 1) 85%),radial-gradient(ellipse at top left, rgba(var(--bs-primary-rgb), 0.5), transparent 50%),radial-gradient(ellipse at top right, rgba(var(--bd-accent-rgb), 0.5), transparent 50%),radial-gradient(ellipse at center right, rgba(var(--bd-violet-rgb), 0.5), transparent 50%),radial-gradient(ellipse at center left, rgba(var(--bd-pink-rgb), 0.5), transparent 50%);
+    }
   </style>  
 
 </head>
@@ -86,9 +97,7 @@
     </div>
   </nav>
 
-
-
-  <div class="">{{ content }}</div>
+  <div id="content">{{ content }}</div>
 
   <script src="{{ "/assets/js/theme.js" | relative_url }}"></script>
 </body>
