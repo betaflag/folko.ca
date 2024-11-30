@@ -3,18 +3,22 @@ layout: default
 title: Cantiques de Noël
 ---
 
-<div class="text-center mb-5">
-  <h1 class="display-5 fw-bold">Cantiques de Noël</h1>
-</div>
+<div class="container">
+  <div class="my-5">
+    <h1 class="display-2">Chansons de Noël</h1>
+  </div>
 
-{% assign items = site.cantiques | sort: 'title' %}
+  {% assign items = site.cantiques | sort: 'title' %}
 
-<div class="row g-4">
-  <div class="col-12">
-    <ul>
-        {% for item in items %}
-        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endfor %}
-    </ul>
+  <div class="list-group list-group-flush">
+    {% for item in items %}
+    <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="{{ item.url }}">
+      <div>
+        <i class="bi bi-music-note-list me-2"></i>
+        {{ item.title }}
+      </div>
+      <i class="bi bi-arrow-right"></i>
+    </a>
+    {% endfor %}
   </div>
 </div>
