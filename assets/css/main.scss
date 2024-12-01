@@ -1,1 +1,12 @@
-@import "main";
+---
+---
+
+@import "bootstrap/bootstrap";
+
+.navbar {
+    background-image: linear-gradient(rgba(var(--bd-violet-rgb), 1), rgba(var(--bd-violet-rgb), 0.95));
+}
+
+.lyrics {
+    background-color: rgba(#000, 0.3) !important;
+}
