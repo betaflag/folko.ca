@@ -2,23 +2,32 @@
 layout: default
 ---
 
-<div class="container pt-3">
-    <a href="/"><i class="bi bi-arrow-left"></i> Retour</a>
+<div class="container">
+    <div class="mb-4">
+        <a href="/" class="btn btn-sm" style="background: rgba(var(--color-purple-rgb), 0.2); border: 1px solid rgba(var(--color-purple-rgb), 0.3);">
+            <i class="bi bi-arrow-left me-2"></i>Retour
+        </a>
+    </div>
 
-    <h1 class="mt-4 display-4">{{ page.title }}</h1>
-    <p class="mb-5 lead text-uppercase">{{ page.artist }}</p>
+    <div class="mb-5">
+        <h1 class="mb-3">{{ page.title }}</h1>
+        <p class="lead text-gradient mb-0" style="font-size: 1.5rem; font-weight: 600;">{{ page.artist }}</p>
+    </div>
 
-    <div id="chordsRef" class="d-flex mb-5">
+    <div id="chordsRef" class="d-flex flex-wrap gap-3 mb-5">
     </div>
 </div>
 
-<pre id="" class="bg-dark-subtle p-4 mb-0 rounded-top container fs-5">
-{{ content }}
-</pre>
+<pre class="lyrics mb-0 container" style="font-size: 1.1rem;">{{ content }}</pre>
 
-{% if page.spotify %}
-<iframe class="mt-3" src="https://open.spotify.com/embed/track/{{page.spotify}}" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-{% endif %}
-
+<div class="container">
+    {% if page.spotify %}
+    <div class="card mt-4">
+        <div class="card-body p-3">
+            <iframe src="https://open.spotify.com/embed/track/{{page.spotify}}" width="100%" height="152" frameBorder="0" allowtransparency="true" allow="encrypted-media" style="border-radius: 12px;"></iframe>
+        </div>
+    </div>
+    {% endif %}
+</div>
 
 <script src="{{ "/assets/js/chords.js" | relative_url }}"></script>

@@ -1,17 +1,17 @@
 ---
 layout: default
 ---
-  
-<div class="container" style="max-width: 750px">
-  <div style="padding-top: 5rem; margin-bottom: 4rem">
 
-    <p class="lead text-uppercase">
-      <a href="/noel/" class="text-reset text-decoration-none">
-        Chansons de Noël
-      </a>
-    </p>
-    <h1 class="display-4">{{ page.title }}</h1>
+<div class="container" style="max-width: 750px">
+  <div class="mb-4">
+    <a href="/noel/" class="btn btn-sm" style="background: rgba(var(--color-purple-rgb), 0.2); border: 1px solid rgba(var(--color-purple-rgb), 0.3);">
+      <i class="bi bi-arrow-left me-2"></i>Chansons de Noël
+    </a>
+  </div>
+
+  <div class="mb-5">
+    <h1>{{ page.title }}</h1>
   </div>
 </div>
 
-<pre class="lyrics p-4 pb-5 mb-0 container fs-5" style="max-width: 750px;">{{ content }}</pre>
+<pre class="lyrics mb-0" style="max-width: 750px; margin: 0 auto; font-size: 1.1rem;">{{ content }}</pre>
